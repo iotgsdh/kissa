@@ -25,8 +25,8 @@ export default async function BlogDetail({
 }) {
   const { id } = await params;
   const data = await getBlog();
-  const news = data;
-  const reverse = news.reverse();
+  const blog = data;
+  const reverse = blog.reverse();
   const item = reverse.find((item: Blog) => item.id === id);
   const itemIndex = reverse.indexOf(item);
   const prev = reverse[itemIndex - 1]?.id;
