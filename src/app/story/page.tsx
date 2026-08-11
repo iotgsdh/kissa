@@ -17,7 +17,7 @@ export default async function Story({
   const params = await searchParams;
   const currentPage =
     typeof params.page === "string" ? parseInt(params.page) : 1;
-  const limit = 8;
+  const limit = 6;
   const offset = (currentPage - 1) * limit;
   const data = await getStories();
   const stories = data;
@@ -26,7 +26,7 @@ export default async function Story({
 
   return (
     <main className="grow">
-      <div className="mx-auto max-w-3xl px-4 py-16 md:max-w-max lg:max-w-7xl">
+      <div className="mx-auto px-4 py-16 md:max-w-max lg:max-w-7xl">
         <h1 className="mb-8">
           <span className="font-noto-serif mb-2 block text-2xl md:me-4 md:inline">
             Story
@@ -38,7 +38,7 @@ export default async function Story({
         </p>
         {stories.length > 0 ? (
           <section>
-            <div className="mb-16 grid gap-y-8 md:grid-cols-2 md:gap-x-8">
+            <div className="mb-16 grid gap-y-8 md:grid-cols-2 md:gap-x-4 lg:grid-cols-3">
               {stories
                 .slice(offset, offset + limit)
                 .map((story: Story, i: number) => (
