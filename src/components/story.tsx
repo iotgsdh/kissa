@@ -15,8 +15,8 @@ export default function Story({ stories }: { stories: Story[] }) {
         </h2>
         {stories.length > 0 ? (
           <div>
-            <div className="mb-16 grid gap-y-8 md:grid-cols-2 md:gap-x-8">
-              {stories.slice(0, 4).map((story, i) => (
+            <div className="mb-16 grid gap-y-8 md:grid-cols-2 md:gap-x-4 lg:grid-cols-3">
+              {stories.slice(0, 6).map((story, i) => (
                 <StoryCard key={story.id} index={i} story={story} />
               ))}
             </div>
