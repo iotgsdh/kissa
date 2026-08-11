@@ -77,7 +77,7 @@ export default function StoryCard({
             alt={story.name1 + (story.name2 ? " " + story.name2 : "")}
             width={story.image1.width}
             height={story.image1.height}
-            sizes="(max-width: 767px) calc(100vw - 16px * 2), (max-width: 1280px) calc(50vw - 16px * 2), 608px"
+            sizes="(max-width: 767px) calc(100vw - 16px * 2), (max-width: 1023px) calc(50vw - 16px * 2), (max-width: 1280px) calc(33vw - 16px * 4), 405px"
             loading={loading}
             preload={isTop ? false : true}
             className="aspect-4/3 object-cover lg:transition-[scale,filter] lg:duration-(--duration) lg:hover:scale-105 lg:hover:brightness-50"
